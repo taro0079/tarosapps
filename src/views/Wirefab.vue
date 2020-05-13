@@ -49,7 +49,7 @@
                     <v-col class="d-flex">
                         <v-btn 
                             color="success"
-                            :disabled="!valid"
+                            :disabled="!valid || dialog2"
                             :loading="loading"
                             @click="pData"
                             > Submit </v-btn>
@@ -73,7 +73,7 @@
                         <v-card-actions>
                             <v-spacer></v-spacer>   
                             <v-btn
-                                @click="dialog=false">Back
+                                @click="dialog=false; dialog2=false">Back
                             </v-btn>
                         </v-card-actions>
                     </v-card>
@@ -90,6 +90,7 @@ export default {
         valid: true,
         dialog:  false,
         loading:  false,
+        dialog2: false,
         predia: '', /** 前駆体直径 */
         prelen: '', /** 前駆体長さ */
         fabdia: '', /** 伸線後直径 */
@@ -103,18 +104,20 @@ export default {
     }),
     methods: {
         pData () {
+            /** if (this.validate() == undefined) */
+            /** Post json data to API server */
+            if (this.$refs.form.validate()){
+            this.dialog2 = true 
+            this.loading = true
             const data = {
                 "predia": this.predia,
                 "prelen": this.prelen,
                 "fabdia": this.fabdia,
             }
-            /** if (this.validate() == undefined) */
-            /** Post json data to API server */
-            if (this.$refs.form.validate()){
-            axios.post('', data)
+            axios.post('/api', data)
             .then((response) => {
-                this.dialog = true
                 this.loading = false
+                this.dialog = true
                 this.fablen = response.data.Fablen
                 console.log(this.validate())
                 console.log(response)
