@@ -7,7 +7,7 @@ module.exports = {
 
       proxy: {
         '/api' :{
-          target: 'https://wirefabapi.herokuapp.com/'
+          target: 'https://wirefabapi.herokuapp.com'
         }
       } 
     }
