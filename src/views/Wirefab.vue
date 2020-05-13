@@ -111,7 +111,7 @@ export default {
             /** if (this.validate() == undefined) */
             /** Post json data to API server */
             if (this.$refs.form.validate()){
-            axios.post('/api/wirefab', data)
+            axios.post('', data)
             .then((response) => {
                 this.dialog = true
                 this.loading = false
