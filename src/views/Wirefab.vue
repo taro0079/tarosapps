@@ -2,6 +2,11 @@
     <v-app>
         <v-content>
             <v-container>
+                <v-row>
+                    <v-col>
+                <v-row>
+                    <div class="display-1">Wire Fab App</div>
+                </v-row>
                 <v-form
                     ref="form"
                     v-model="valid"
@@ -19,6 +24,7 @@
                         <div class="align-self-center pa-5"> (mm) </div>
                     </v-col>
                 </v-row>
+
                 <!-- 前駆体長さ記入フォーム -->
                 <v-row>
                     <v-col class="align-self-center d-flex">
@@ -55,6 +61,9 @@
                             > Submit </v-btn>
                     </v-col>
                 </v-row>
+                    </v-col>
+                </v-row>
+
                 <v-dialog
                     v-model="dialog"
                     persistent :overlay="false"
