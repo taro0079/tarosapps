@@ -114,7 +114,7 @@ export default {
                 "prelen": this.prelen,
                 "fabdia": this.fabdia,
             }
-            axios.post('http://localhost:8000/post', data)
+            axios.post('https://wirefabapi.herokuapp.com/post', data)
             .then((response) => {
                 this.loading = false
                 this.dialog = true
