@@ -12,7 +12,7 @@
     <v-content>
       <v-container>
         <v-row justify="center">
-          <v-col md="6">
+          <v-col>
             <router-view/>
           </v-col>
         </v-row>
