@@ -114,7 +114,7 @@ export default {
                 "prelen": this.prelen,
                 "fabdia": this.fabdia,
             }
-            axios.post('/api', data)
+            axios.post('http://localhost:8000/post', data)
             .then((response) => {
                 this.loading = false
                 this.dialog = true
