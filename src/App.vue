@@ -4,7 +4,7 @@
       <v-app-bar color="deep-purple accent-4" dense dark >
         <v-toolbar-title> Taro's Apps </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn text icon depressed to="Home">
+        <v-btn text icon depressed to="/">
           <v-icon>mdi-home</v-icon>
         </v-btn>
       </v-app-bar>
