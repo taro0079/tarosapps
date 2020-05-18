@@ -30,11 +30,12 @@
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline"> application </div>
-                  <v-list-item-title> Coming soon ! </v-list-item-title>
-                  <v-list-item-subtitle> Coming soon !</v-list-item-subtitle>
+                  <v-list-item-title> Ic-B graph draw </v-list-item-title>
+                  <v-list-item-subtitle> You can draw the Jc - B graph by using this app !!</v-list-item-subtitle>
                     <v-card-actions>
                       <v-btn 
                         text color="deep-purple accent-4"
+                        to="/csv"
                       > 
                         Start </v-btn>
                     </v-card-actions>
