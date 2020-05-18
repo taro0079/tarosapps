@@ -23,6 +23,17 @@ Vue.use(VueRouter)
     name: 'Wirefab',
     component: () => import('../views/Wirefab.vue')
 
+  },
+  {
+    path: '/graph',
+    name: 'Graph',
+    component: () => import('../views/graph.vue')
+    
+  },
+  {
+    path: '/csv',
+    name: 'CSV',
+    component: () => import('../views/csv.vue')
   }
 ]
 
